@@ -10,13 +10,18 @@ This script when included in an HTML document which includes any declared styles
 6. If there are no properties in the remaining `CSSRule` then remove the rule.
 7. As a side effect most selectors which don't change the browsers default setting will be removed (unless using `font` as opposed to `font-*` and similar which will activate the rest of the settings for that property).
 
+##Usage
+
+###Note: this is only meant to be run once
+
 If you're running this script on a site which includes styles relating to dynamic elements, just wrap them in a media query
 
     @media (min-width: 0px) {
         /* This says that these styles always apply */
     }
-#Usage
 
 Include this line at the bottom of the body
 
     <script src="https://cdn.rawgit.com/humbleRumble/optiCSS/master/optiCSS.js" type="text/javascript"></script>
+
+Then look at your console to see the optimized css. Copy and paste the results into one main css file.
