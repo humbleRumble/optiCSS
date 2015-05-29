@@ -1,4 +1,5 @@
-# optiCSS
+#optiCSS  
+(read: eye-pleasing)
 
 This script when included in an HTML document which includes any declared styles (excluding those set by `style=""`) will output an optimized stylesheet to the console.
 
