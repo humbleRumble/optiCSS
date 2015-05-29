@@ -14,7 +14,7 @@ This script when included in an HTML document which includes any declared styles
 
 ###Note: this is only meant to be run once
 
-If you're running this script on a site which includes styles relating to dynamic elements, just wrap them in a media query
+If you're running this script on a site which includes styles relating to dynamic elements, just wrap them in a media query and the script will leave them alone
 
     @media (min-width: 0px) {
         /* This says that these styles always apply */
