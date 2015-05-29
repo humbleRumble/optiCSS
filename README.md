@@ -1,10 +1,10 @@
 # optiCSS
 
-This script when included in an HTML document which includes any declared styles (excluding those set by `style=""`) will output an optimized stylesheet the console.
+This script when included in an HTML document which includes any declared styles (excluding those set by `style=""`) will output an optimized stylesheet to the console.
 
 1. Ignore any `@` rules to leave responsive styles as is.
 2. Separate the rules into single selector rules so we can test for inheritance later on.
-3. Remove rules that apply to selectors which don't exist in the document thanks to @RickHitchcock for this.
+3. Remove rules that apply to selectors which don't exist in the document thanks to [@RickHitchcock](http://stackoverflow.com/users/3903374/rick-hitchcock) for this.
 4. Retrieve both the declared and computed styles in the same format (excluding percentages) and compares both values by checking whether the computed value matches the declared value, then it will remove the property and check again.
 5. Check if the declared value matches the computed value and by removing the property the value changes, then set the keep flag. This tells us whether has an effect on an element and if no elements were affected by the setting... remove it.
 6. If there are no properties in the remaining `CSSRule` then remove the rule.
