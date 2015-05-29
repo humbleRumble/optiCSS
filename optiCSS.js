@@ -14,7 +14,7 @@ for (i = 0; (stylesheet = stylesheets[i]); i++) {
                         for(m = 0; (style = styles[m]); m++) {
                             styleString += style + ': ' + styles.getPropertyValue(style) + '; ';
                         }
-                        newRules.push((selector.trim() + ' { ' + styleString.trim() + ' }'));
+                        newRules.push([selector.trim() + ' { ' + styleString.trim() + ' }',j]);
                     }
                 }
                 stylesheet.deleteRule(j);
@@ -24,7 +24,7 @@ for (i = 0; (stylesheet = stylesheets[i]); i++) {
     if(newRules.length) {
         var rule, j;
         for(j = 0; (rule = newRules[j]); j++) {
-            stylesheet.insertRule(rule, 0);
+            stylesheet.insertRule(rule[0], rule[1]);
         }
     }
     for (j = 0; (rule = rules[j]); j++) {
