@@ -15,3 +15,8 @@ If you're running this script on a site which includes styles relating to dynami
     @media (min-width: 0px) {
         /* This says that these styles always apply */
     }
+#Usage
+
+Include this line at the bottom of the body
+
+    <script src="https://cdn.rawgit.com/humbleRumble/optiCSS/master/optiCSS.js" type="text/javascript"></script>
