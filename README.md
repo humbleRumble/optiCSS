@@ -1,7 +1,7 @@
 #optiCSS  
 (read: eye-pleasing)
 
-This script when included in an HTML document which includes any declared styles (excluding those set by `style=""`) will output an optimized stylesheet to the console. The script uses the following methods...
+This script when included in an HTML document which includes any declared styles (excluding those set by `style=""`) will output an optimized stylesheet to the page. The script uses the following methods...
 
 1. Ignore any `@` rules to leave responsive styles as is.
 2. Separate the rules into single selector rules so we can test for inheritance later on.
