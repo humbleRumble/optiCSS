@@ -14,7 +14,7 @@ for (i = 0; (stylesheet = stylesheets[i]); i++) {
                         for(m = 0; (style = styles[m]); m++) {
                             styleString += style + ': ' + styles.getPropertyValue(style) + '; ';
                         }
-                        newRules.push([selector.trim() + ' { ' + styleString.trim() + ' }',j]);
+                        newRules.push((selector.trim() + ' { ' + styleString.trim() + ' }'));
                     }
                 }
                 stylesheet.deleteRule(j);
@@ -24,9 +24,10 @@ for (i = 0; (stylesheet = stylesheets[i]); i++) {
     if(newRules.length) {
         var rule, j;
         for(j = 0; (rule = newRules[j]); j++) {
-            stylesheet.insertRule(rule[0], rule[1]);
+            stylesheet.insertRule(rule, 0);
         }
     }
+    var ruleText = "";
     for (j = 0; (rule = rules[j]); j++) {
         if(rule.type === rule.STYLE_RULE) {
             var styles = rule.style, style, k;
@@ -54,11 +55,12 @@ for (i = 0; (stylesheet = stylesheets[i]); i++) {
                     }
                 }
                 if (styles.length) {
-                    console.log(rule.cssText);
+                   ruleText += rule.cssText + "\n";
                 }
             }
         } else {
-            console.log(rule.cssText);
+            ruleText += rule.cssText + "\n";
         }
     }
+    document.body.innerHTML = '<pre>' + ruleText + '<pre>';
 }
