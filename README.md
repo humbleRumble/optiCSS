@@ -25,4 +25,4 @@ Include this line at the bottom of the body
 
     <script src="https://cdn.rawgit.com/humbleRumble/optiCSS/master/optiCSS.js" type="text/javascript"></script>
 
-Then look at your console to see the optimized css. Copy and paste the results into one main css file.
+The new stylesheet will replace the contents of the page on completion. Keep in mind this can take a while.
